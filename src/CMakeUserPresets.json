@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "user-paths",
+      "hidden": true,
+      "environment": {
+        "DAZStudioSDK_ROOT_DIR": "D:/Dependencies/DAZStudio4.5+ SDK",
+      }
+    },
+    {
+      "name": "user-paths-x64",
+      "hidden": true,
+      "environment": {
+      }
+    },
+    {
+      "name": "user-paths-x86",
+      "hidden": true,
+      "environment": {
+      }
+    },
+    {
+      "name": "user-windows-x64",
+      "displayName": "Windows x64",
+      "description": "Windows x64 configuration with user paths",
+      "inherits": [ "user-paths-x64", "user-paths", "arch-x64", "windows-default" ]
+    },
+    {
+      "name": "user-windows-x86",
+      "displayName": "Windows x86",
+      "description": "Windows x86 configuration with user paths",
+      "inherits": [ "user-paths-x86", "user-paths", "arch-x86", "windows-default" ]
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "windows-x64-debug",
+      "displayName": "Windows x64 Debug",
+      "configurePreset": "user-windows-x64",
+      "inherits": [ "debug" ],
+      "description": "Target Windows x64 Debug with the Visual Studio development environment with user paths."
+    },
+    {
+      "name": "windows-x64-release",
+      "displayName": "Windows x64 Release",
+      "configurePreset": "user-windows-x64",
+      "inherits": [ "release" ],
+      "description": "Target Windows x64 Release with the Visual Studio development environment with user paths."
+    },
+    {
+      "name": "windows-x64-relwithdebinfo",
+      "displayName": "Windows x64 RelWithDebInfo",
+      "configurePreset": "user-windows-x64",
+      "inherits": [ "relwithdebinfo" ],
+      "description": "Target Windows x64 RelWithDebInfo with the Visual Studio development environment with user paths."
+    },
+    {
+      "name": "windows-x86-debug",
+      "displayName": "Windows x86 Debug",
+      "configurePreset": "user-windows-x86",
+      "inherits": [ "debug" ],
+      "description": "Target Windows x86 Debug with the Visual Studio development environment with user paths."
+    },
+    {
+      "name": "windows-x86-release",
+      "displayName": "Windows x86 Release",
+      "configurePreset": "user-windows-x86",
+      "inherits": [ "release" ],
+      "description": "Target Windows x86 Release with the Visual Studio development environment with user paths."
+    },
+    {
+      "name": "windows-x86-relwithdebinfo",
+      "displayName": "Windows x86 RelWithDebInfo",
+      "configurePreset": "user-windows-x86",
+      "inherits": [ "relwithdebinfo" ],
+      "description": "Target Windows x86 RelWithDebInfo with the Visual Studio development environment with user paths."
+    }
+  ]
+}

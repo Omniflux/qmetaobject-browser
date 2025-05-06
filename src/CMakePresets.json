@@ -1,0 +1,59 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 30,
+    "patch": 5
+  },
+  "configurePresets": [
+    {
+      "name": "windows-default",
+      "hidden": true,
+      "generator": "Visual Studio 17 2022",
+      "toolset": "Windows7.1SDK",
+      "binaryDir": "${sourceDir}/../build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/../install/${presetName}"
+      },
+      "vendor": { "microsoft.com/VisualStudioSettings/CMake/1.0": { "hostOS": [ "Windows" ] } },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
+      "name": "arch-x64",
+      "hidden": true,
+      "architecture": {
+        "value": "x64",
+        "strategy": "set"
+      }
+    },
+    {
+      "name": "arch-x86",
+      "hidden": true,
+      "architecture": {
+        "value": "Win32",
+        "strategy": "set"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "hidden": true,
+      "configuration": "debug"
+    },
+    {
+      "name": "release",
+      "hidden": true,
+      "configuration": "release"
+    },
+    {
+      "name": "relwithdebinfo",
+      "hidden": true,
+      "configuration": "relwithdebinfo"
+    }
+  ]
+}
